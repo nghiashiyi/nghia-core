@@ -25,7 +25,6 @@ dependencies:
   retrofit: ^2.0.1
   pretty_dio_logger: ^1.1.1
   fluttertoast: ^8.0.8
-  firebase_remote_config: ^0.11.0
   flutter_svg: ^0.23.0+1
   material_floating_search_bar: ^0.3.4
   flutter_dotenv: ^5.0.2
@@ -48,6 +47,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/fonts/
     - assets/translations/
     - assets/icons/
     - assets/config/dev/

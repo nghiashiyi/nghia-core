@@ -1,4 +1,5 @@
 import 'package:adroit_flutter/core/navigation/routes.dart';
+import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ Route<Object>? generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case Routes.root:
       return _buildRoute(settings: settings, screen: Container());
+    case Routes.home:
+      return _buildRoute(settings: settings, screen: HomeScreen());
     default:
       return _errorRoute();
   }

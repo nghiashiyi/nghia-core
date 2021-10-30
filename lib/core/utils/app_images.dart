@@ -4,24 +4,15 @@ import 'package:flutter/widgets.dart';
 
 /// How to use as Widget
 /// ```
-/// AppIcons.expand.widget()
+/// AppImages.sample.widget()
 /// ````
-abstract class AppIcons {
-  AppIcons._();
+abstract class AppImages {
+  AppImages._();
 
-  static const String _assetPath = "assets/icons/";
+  static const String _assetPath = "assets/images/";
 
-  static AppImageBuilder get tagHealthcare =>
-      AppImageBuilder(_assetPath + 'tag_healthcare.svg');
-
-  static AppImageBuilder get thumbUp =>
-      AppImageBuilder(_assetPath + 'thumb_up.svg');
-
-  static AppImageBuilder get rightArrow =>
-      AppImageBuilder(_assetPath + 'right_arrow.svg');
-
-  static AppImageBuilder get expand =>
-      AppImageBuilder(_assetPath + 'expand.svg');
+  static AppImageBuilder get sample =>
+      AppImageBuilder(_assetPath + 'sample.png');
 }
 
 class AppImageBuilder {

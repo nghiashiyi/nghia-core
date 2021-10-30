@@ -1,6 +1,5 @@
 export 'app_constants.dart';
 export 'app_locale.dart';
-export 'formatting_constants.dart';
 export 'package:easy_localization/easy_localization.dart';
 export 'app_color.dart';
 export 'app_icons.dart';

@@ -21,6 +21,6 @@ Future<void> main() async {
       supportedLocales: [AppLocales.en],
       path: AppPaths.assetTranslationsPath,
       fallbackLocale: AppLocales.en,
-      child: MyApp()));
+      child: KoKoApp()));
 }
 

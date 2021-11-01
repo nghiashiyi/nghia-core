@@ -13,4 +13,5 @@ class Routes {
   static const String otp = '/otp';
   static const String choose_product = '/choose_product';
   static const String search_product = '/search_product';
+  static const String review = '/review';
 }

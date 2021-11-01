@@ -5,6 +5,7 @@ import 'package:adroit_flutter/core/utils/app_constants.dart';
 import 'package:adroit_flutter/core/utils/app_icons.dart';
 import 'package:adroit_flutter/core/utils/app_locale.dart';
 import 'package:adroit_flutter/core/widgets/appbar_cus.dart';
+import 'package:adroit_flutter/core/widgets/product_catalogue.dart';
 import 'package:adroit_flutter/features/new_sale/representation/product.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
@@ -27,148 +28,200 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
           onTap: () {
             Navigator.pop(context);
           }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          NavigationService.push(Routes.search_product);
-        },
-        child: AppIcons.search.widget(),
-        backgroundColor: AppColors.mainYellow,
-      ),
       body: Container(
         width: width,
         height: height,
-        child: Column(
+        child: Stack(
           children: [
-            Material(
-              color: AppColors.white,
-              elevation: 2,
-              child: Container(
-                height: 35,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: paddingCont),
-                  child: Row(
-                    children: [
-                      AppIcons.person.widget(fit: BoxFit.cover),
-                      SizedBox(
-                        width: paddingCont / 2,
+            Column(
+              children: [
+                Material(
+                  color: AppColors.white,
+                  elevation: 2,
+                  child: Container(
+                    height: 35,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: paddingCont),
+                      child: Row(
+                        children: [
+                          AppIcons.person.widget(fit: BoxFit.cover),
+                          SizedBox(
+                            width: paddingCont / 2,
+                          ),
+                          Text(
+                            LocaleTexts.userName.tr(),
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.w500),
+                          ),
+                        ],
                       ),
-                      Text(
-                        LocaleTexts.userName.tr(),
-                        style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                Expanded(
+                    child: SingleChildScrollView(
+                  child: Container(
+                    width: width,
+                    padding: EdgeInsets.all(paddingCont),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          LocaleTexts.flourSugar.tr(),
+                          style: TextStyle(
+                              color: AppColors.mainBlue,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Container(
+                          width: width,
+                          height: 170,
+                          child: GridView.builder(
+                              physics: NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 4,
+                              ),
+                              itemCount: 7,
+                              itemBuilder: (context, index) {
+                                Product exampleProduct = exampleProducts[index];
+                                return ProductCatalogue(
+                                  exampleProduct: exampleProduct,
+                                  product: exampleProduct,
+                                );
+                              }),
+                        ),
+                        Text(
+                          LocaleTexts.dairy.tr(),
+                          style: TextStyle(
+                              color: AppColors.mainBlue,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Container(
+                          width: width,
+                          height: 170,
+                          child: GridView.builder(
+                              physics: NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 4,
+                              ),
+                              itemCount: 6,
+                              itemBuilder: (context, index) {
+                                Product exampleProduct =
+                                    exampleProducts[index + 1];
+                                return ProductCatalogue(
+                                  exampleProduct: exampleProduct,
+                                  product: exampleProduct,
+                                );
+                              }),
+                        ),
+                        Text(
+                          LocaleTexts.riceGrain.tr(),
+                          style: TextStyle(
+                              color: AppColors.mainBlue,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Container(
+                          width: width,
+                          height: 300,
+                          child: GridView.builder(
+                              physics: NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 4,
+                              ),
+                              itemCount: 10,
+                              itemBuilder: (context, index) {
+                                Product exampleProduct =
+                                    exampleProducts[index + 1];
+                                return ProductCatalogue(
+                                  exampleProduct: exampleProduct,
+                                  product: exampleProduct,
+                                );
+                              }),
+                        ),
+                      ],
+                    ),
+                  ),
+                ))
+              ],
             ),
-            Expanded(
-                child: SingleChildScrollView(
-              child: Container(
-                width: width,
-                padding: EdgeInsets.all(paddingCont),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      LocaleTexts.flourSugar.tr(),
-                      style: TextStyle(
-                          color: AppColors.mainBlue,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Container(
+            isFinish
+                ? Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
                       width: width,
-                      height: 170,
-                      child: GridView.builder(
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
+                      height: 70,
+                      color: AppColors.white,
+                      padding: EdgeInsets.all(paddingCont),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '${LocaleTexts.total.tr()} ${productAddeds[0].productCode}',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                              Text(
+                                '(${productAddeds.length}) ${LocaleTexts.itemsTotal.tr()}',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400, fontSize: 12),
+                              ),
+                            ],
                           ),
-                          itemCount: 7,
-                          itemBuilder: (context, index) {
-                            Product exampleProduct = exampleProducts[index];
-                            return ProductCatalogue(
-                                exampleProduct: exampleProduct);
-                          }),
-                    ),
-                    Text(
-                      LocaleTexts.dairy.tr(),
-                      style: TextStyle(
-                          color: AppColors.mainBlue,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Container(
-                      width: width,
-                      height: 170,
-                      child: GridView.builder(
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
+                          GestureDetector(
+                            onTap: () {
+                              NavigationService.push(Routes.review);
+                            },
+                            child: Container(
+                              height: 50,
+                              padding:
+                                  EdgeInsets.symmetric(horizontal: paddingCont),
+                              margin:
+                                  EdgeInsets.symmetric(horizontal: paddingCont),
+                              decoration: BoxDecoration(
+                                  color: AppColors.mainBlue,
+                                  borderRadius: BorderRadius.circular(38)),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  AppIcons.arrow_forward
+                                      .widget(color: AppColors.mainBlue),
+                                  Text(
+                                    LocaleTexts.proceedBtn.tr(),
+                                    style: btnTextStyle,
+                                  ),
+                                  AppIcons.arrow_forward.widget()
+                                ],
+                              ),
+                            ),
                           ),
-                          itemCount: 6,
-                          itemBuilder: (context, index) {
-                            Product exampleProduct = exampleProducts[index];
-                            return ProductCatalogue(
-                                exampleProduct: exampleProduct);
-                          }),
+                        ],
+                      ),
                     ),
-                    Text(
-                      LocaleTexts.riceGrain.tr(),
-                      style: TextStyle(
-                          color: AppColors.mainBlue,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500),
-                    ),
-                    Container(
-                      width: width,
-                      height: 300,
-                      child: GridView.builder(
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
-                          ),
-                          itemCount: 10,
-                          itemBuilder: (context, index) {
-                            Product exampleProduct = exampleProducts[index];
-                            return ProductCatalogue(
-                                exampleProduct: exampleProduct);
-                          }),
-                    ),
-                  ],
-                ),
+                  )
+                : Container(),
+            Positioned(
+              right: 10,
+              bottom: isFinish ? 85 : 10,
+              child: FloatingActionButton(
+                onPressed: () {
+                  NavigationService.push(Routes.search_product);
+                },
+                child: AppIcons.search.widget(),
+                backgroundColor: AppColors.mainYellow,
               ),
-            ))
+            )
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ProductCatalogue extends StatelessWidget {
-  const ProductCatalogue({
-    Key? key,
-    required this.exampleProduct,
-  }) : super(key: key);
-
-  final Product exampleProduct;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(paddingCont / 4),
-      child: Container(
-        decoration: BoxDecoration(
-            border: Border.all(color: AppColors.darkGray),
-            borderRadius: BorderRadius.circular(6)),
-        child: Container(
-            margin: EdgeInsets.all(paddingCont / 2),
-            child: Image.network(exampleProduct.urlImage)),
       ),
     );
   }

@@ -82,6 +82,20 @@ abstract class AppIcons {
 
   static AppImageBuilder get search =>
       AppImageBuilder(_assetPath + 'search.svg');
+
+  static AppImageBuilder get close_blue =>
+      AppImageBuilder(_assetPath + 'close_blue.svg');
+
+  static AppImageBuilder get add_circle =>
+      AppImageBuilder(_assetPath + 'add_circle.svg');
+
+  static AppImageBuilder get delete_circle =>
+      AppImageBuilder(_assetPath + 'delete_circle.svg');
+
+  static AppImageBuilder get remove_circle =>
+      AppImageBuilder(_assetPath + 'remove_circle.svg');
+
+  static AppImageBuilder get close => AppImageBuilder(_assetPath + 'close.svg');
 }
 
 class AppImageBuilder {

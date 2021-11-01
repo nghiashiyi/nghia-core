@@ -2,6 +2,7 @@ import 'package:adroit_flutter/core/navigation/navigation_service.dart';
 import 'package:adroit_flutter/core/navigation/route_generator.dart';
 import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/core/utils/utils.dart';
+import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

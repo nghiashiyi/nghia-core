@@ -11,6 +11,8 @@ abstract class AppIcons {
 
   static const String _assetPath = "assets/icons/";
 
+  static AppImageBuilder get test => AppImageBuilder(_assetPath + 'test.svg');
+
   static AppImageBuilder get tagHealthcare =>
       AppImageBuilder(_assetPath + 'tag_healthcare.svg');
 
@@ -22,6 +24,64 @@ abstract class AppIcons {
 
   static AppImageBuilder get expand =>
       AppImageBuilder(_assetPath + 'expand.svg');
+
+  static AppImageBuilder get account_box =>
+      AppImageBuilder(_assetPath + 'account_box.svg');
+
+  static AppImageBuilder get logo_card =>
+      AppImageBuilder(_assetPath + 'logo_card.svg');
+
+  static AppImageBuilder get local_shipping =>
+      AppImageBuilder(_assetPath + 'local_shipping.svg');
+
+  static AppImageBuilder get phone => AppImageBuilder(_assetPath + 'phone.svg');
+
+  static AppImageBuilder get shopping_cart =>
+      AppImageBuilder(_assetPath + 'shopping_cart.svg');
+
+  static AppImageBuilder get arrow_back =>
+      AppImageBuilder(_assetPath + 'arrow_back.svg');
+
+  static AppImageBuilder get arrow_forward =>
+      AppImageBuilder(_assetPath + 'arrow_forward.svg');
+
+  static AppImageBuilder get business =>
+      AppImageBuilder(_assetPath + 'business.svg');
+
+  static AppImageBuilder get car_tap_anim =>
+      AppImageBuilder(_assetPath + 'car_tap_anim.svg');
+
+  static AppImageBuilder get check_icon =>
+      AppImageBuilder(_assetPath + 'check_icon.svg');
+
+  static AppImageBuilder get false_icon =>
+      AppImageBuilder(_assetPath + 'false_icon.svg');
+
+  static AppImageBuilder get home => AppImageBuilder(_assetPath + 'home.svg');
+
+  static AppImageBuilder get person =>
+      AppImageBuilder(_assetPath + 'person.svg');
+
+  static AppImageBuilder get phone_icon =>
+      AppImageBuilder(_assetPath + 'phone_icon.svg');
+
+  static AppImageBuilder get pre_loader_anim =>
+      AppImageBuilder(_assetPath + 'pre_loader_anim.svg');
+
+  static AppImageBuilder get refresh_icon =>
+      AppImageBuilder(_assetPath + 'refresh_icon.svg');
+
+  static AppImageBuilder get koko_club_logo =>
+      AppImageBuilder(_assetPath + 'koko_club_logo.svg');
+
+  static AppImageBuilder get two_hearts =>
+      AppImageBuilder(_assetPath + 'two_hearts.svg');
+
+  static AppImageBuilder get koko_club_card =>
+      AppImageBuilder(_assetPath + 'koko_club_card.svg');
+
+  static AppImageBuilder get search =>
+      AppImageBuilder(_assetPath + 'search.svg');
 }
 
 class AppImageBuilder {

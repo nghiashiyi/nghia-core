@@ -4,8 +4,9 @@ class AppColors {
   static const Color black = Color(0xff231F20);
   static const Color white = Colors.white;
   static const Color darkGray = Color(0xffB5B5B5);
+
   static const Color mediumGray = Color(0xffB5B5B5);
-  static const Color lightGray = Color(0xffF2F2F2);
+  static const Color lightGray = Color(0xffF8F8FA);
   static const Color blue = Color(0xff108BD0);
   static const Color darkBlue = Color(0xff122F78);
 
@@ -25,4 +26,7 @@ class AppColors {
   static const Color otherPurple = Color(0xff8052af);
   static const Color otherLightBlue = Color(0xff52a9af);
   static const Color otherLightRed = Color(0xffaf5252);
+
+  static const Color mainYellow = Color(0xffFEC72B);
+  static const Color mainBlue = Color(0xff002FA8);
 }

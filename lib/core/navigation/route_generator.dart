@@ -1,5 +1,14 @@
 import 'package:adroit_flutter/core/navigation/routes.dart';
+import 'package:adroit_flutter/features/home/representation/home_2_screen.dart';
 import 'package:adroit_flutter/features/home/representation/home_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/customer_name_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_type_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/new_card_failure_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/new_card_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/new_card_success_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/phone_number_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +21,28 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: Container());
     case Routes.home:
       return _buildRoute(settings: settings, screen: HomeScreen());
+    case Routes.identify_customer:
+      return _buildRoute(settings: settings, screen: IdentifyCustomerScreen());
+    case Routes.scan_canister:
+      return _buildRoute(settings: settings, screen: ScanCanisterScreen());
+    case Routes.identify_customer_type:
+      return _buildRoute(
+          settings: settings,
+          screen: IdentifyCustomerTypeScreen(
+            type: args.toString(),
+          ));
+    case Routes.new_card:
+      return _buildRoute(settings: settings, screen: NewCardScreen());
+    case Routes.new_card_success:
+      return _buildRoute(settings: settings, screen: NewCardSuccessScreen());
+    case Routes.new_card_failure:
+      return _buildRoute(settings: settings, screen: NewCardFailureScreen());
+    case Routes.phone_number:
+      return _buildRoute(settings: settings, screen: PhoneNumberScreen());
+    case Routes.customer_name:
+      return _buildRoute(settings: settings, screen: CustomerNameScreen());
+    case Routes.home_2:
+      return _buildRoute(settings: settings, screen: Home2Screen());
     default:
       return _errorRoute();
   }

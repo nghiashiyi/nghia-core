@@ -11,8 +11,20 @@ abstract class AppImages {
 
   static const String _assetPath = "assets/images/";
 
-  static AppImageBuilder get sample =>
-      AppImageBuilder(_assetPath + 'sample.png');
+  static AppImageBuilder get canister_img =>
+      AppImageBuilder(_assetPath + 'canister_img.png');
+
+  static AppImageBuilder get canister_logo =>
+      AppImageBuilder(_assetPath + 'canister_logo.png');
+
+  static AppImageBuilder get shopping_color =>
+      AppImageBuilder(_assetPath + 'shopping_color.png');
+
+  static AppImageBuilder get shipping_color =>
+      AppImageBuilder(_assetPath + 'shipping_color.png');
+
+  static AppImageBuilder get user_color =>
+      AppImageBuilder(_assetPath + 'user_color.png');
 }
 
 class AppImageBuilder {

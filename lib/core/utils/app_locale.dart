@@ -108,9 +108,8 @@ class LocaleTexts {
   static const tapNewCustomerFlow = 'tapNewCustomerFlow';
   static const tapExistingCustomerFlow = 'tapExistingCustomerFlow';
   static const enterCodeSMS = 'enterCodeSMS';
-  static const askPasscodeSMS = 'askPasscodeSMS';
-
-  static const waitTime = 'waitTime';
+  static const askPasscodeSMS1 = 'askPasscodeSMS1';
+  static const askPasscodeSMS2 = 'askPasscodeSMS2';
 
   static const resendOTP = 'resendOTP';
   static const enterCustomerName = 'enterCustomerName';

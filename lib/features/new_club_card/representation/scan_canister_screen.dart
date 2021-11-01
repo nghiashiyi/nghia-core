@@ -1,6 +1,7 @@
 import 'package:adroit_flutter/core/navigation/navigation_service.dart';
 import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/core/utils/app_color.dart';
+import 'package:adroit_flutter/core/utils/app_constants.dart';
 import 'package:adroit_flutter/core/utils/app_images.dart';
 import 'package:adroit_flutter/core/utils/app_locale.dart';
 import 'package:adroit_flutter/core/widgets/alert_confirm.dart';
@@ -63,38 +64,41 @@ class _ScanCanisterScreenState extends State<ScanCanisterScreen> {
               ),
               Expanded(
                   flex: 1,
-                  child: Container(
-                    color: AppColors.white,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(left: 15, right: 5),
-                            child: RichText(
-                              text: TextSpan(
-                                text: LocaleTexts.pointCameraScanQr1.tr(),
-                                style: TextStyle(color: AppColors.black),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                    text: LocaleTexts.qrCode.tr(),
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  TextSpan(
-                                      text: LocaleTexts.pointCameraScanQr2.tr(),
-                                      style: TextStyle(color: AppColors.black)),
-                                ],
+                  child: Stack(
+                    children: [
+                      Container(
+                        child: AppImages.canister_img
+                            .widget(height: height, fit: BoxFit.fill),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              margin: EdgeInsets.only(left: 15, right: 5),
+                              child: RichText(
+                                text: TextSpan(
+                                  text: LocaleTexts.pointCameraScanQr1.tr(),
+                                  style: TextStyle(color: AppColors.black),
+                                  children: <TextSpan>[
+                                    TextSpan(
+                                      text: LocaleTexts.qrCode.tr(),
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(
+                                        text:
+                                            LocaleTexts.pointCameraScanQr2.tr(),
+                                        style:
+                                            TextStyle(color: AppColors.black)),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            child: AppImages.canister_img.widget(),
-                          ),
-                        ),
-                      ],
-                    ),
+                          Expanded(child: Container()),
+                        ],
+                      ),
+                    ],
                   ))
             ],
           )),

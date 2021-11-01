@@ -12,21 +12,21 @@ import 'package:adroit_flutter/core/widgets/cus_btn.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
-class CustomerNameScreen extends StatefulWidget {
-  const CustomerNameScreen({Key? key}) : super(key: key);
+class OtpScreen extends StatefulWidget {
+  const OtpScreen({Key? key}) : super(key: key);
 
   @override
-  _CustomerNameScreenState createState() => _CustomerNameScreenState();
+  _OtpScreenState createState() => _OtpScreenState();
 }
 
-class _CustomerNameScreenState extends State<CustomerNameScreen> {
+class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: buildAppBarCus(
-          title: LocaleTexts.customerNameAppbar.tr(),
+          title: LocaleTexts.oneTimePasscodeAppbar.tr(),
           onTap: () {
             Navigator.pop(context);
           }),
@@ -37,8 +37,31 @@ class _CustomerNameScreenState extends State<CustomerNameScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              LocaleTexts.enterCustomerName.tr(),
+              LocaleTexts.enterCodeSMS.tr(),
               style: titleTextStyle,
+            ),
+            SizedBox(
+              height: paddingCont * 2,
+            ),
+            RichText(
+              textAlign: TextAlign.left,
+              text: TextSpan(
+                text: LocaleTexts.askPasscodeSMS1.tr(),
+                style: TextStyle(
+                    color: AppColors.black, fontSize: subTitleTextSize),
+                children: <TextSpan>[
+                  TextSpan(
+                    text: LocaleTexts.oneTimePasscodeAppbar.tr(),
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: subTitleTextSize),
+                  ),
+                  TextSpan(
+                      text: LocaleTexts.askPasscodeSMS2.tr(),
+                      style: TextStyle(
+                          color: AppColors.black, fontSize: subTitleTextSize)),
+                ],
+              ),
             ),
             SizedBox(
               height: paddingCont * 2,
@@ -53,7 +76,8 @@ class _CustomerNameScreenState extends State<CustomerNameScreen> {
                   border: OutlineInputBorder(
                       borderSide:
                           BorderSide(color: AppColors.mainBlue, width: 1)),
-                  labelText: LocaleTexts.customerNameAppbar.tr(),
+                  labelText:
+                      LocaleTexts.oneTimePasscodeAppbar.tr().toUpperCase(),
                   labelStyle: TextStyle(color: AppColors.mainYellow)),
             ),
             SizedBox(
@@ -64,8 +88,7 @@ class _CustomerNameScreenState extends State<CustomerNameScreen> {
                 boderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
-                  NavigationService.push(Routes.identify_customer_type,
-                      arguments: 'phone_number');
+                  NavigationService.push(Routes.new_card);
                 },
                 insideWidget: Padding(
                   padding: EdgeInsets.all(paddingCont),
@@ -80,7 +103,22 @@ class _CustomerNameScreenState extends State<CustomerNameScreen> {
                       AppIcons.arrow_forward.widget()
                     ],
                   ),
-                ))
+                )),
+            SizedBox(
+              height: paddingCont * 2,
+            ),
+            Container(
+              width: width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    LocaleTexts.resendOTP.tr(),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

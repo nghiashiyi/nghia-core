@@ -10,4 +10,5 @@ class Routes {
   static const String phone_number = '/phone_number';
   static const String customer_name = '/customer_name';
   static const String home_2 = '/home_2';
+  static const String otp = '/otp';
 }

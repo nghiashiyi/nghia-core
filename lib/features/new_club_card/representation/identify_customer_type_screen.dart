@@ -42,7 +42,11 @@ class _IdentifyCustomerTypeScreenState
               width: width,
               child: MenuWidget(
                 onTap: () {
-                  NavigationService.push(Routes.new_card);
+                  if (widget.type == 'scan') {
+                    NavigationService.push(Routes.new_card);
+                  } else if (widget.type == 'phone_number') {
+                    NavigationService.push(Routes.otp);
+                  }
                 },
                 mainColor: AppColors.mainBlue,
                 title: LocaleTexts.houseHold.tr(),
@@ -80,7 +84,11 @@ class _IdentifyCustomerTypeScreenState
               width: width,
               child: MenuWidget(
                 onTap: () {
-                  NavigationService.push(Routes.new_card);
+                  if (widget.type == 'scan') {
+                    NavigationService.push(Routes.new_card);
+                  } else if (widget.type == 'phone_number') {
+                    NavigationService.push(Routes.otp);
+                  }
                 },
                 mainColor: AppColors.mainBlue,
                 title: LocaleTexts.commercial.tr(),

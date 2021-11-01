@@ -7,6 +7,7 @@ import 'package:adroit_flutter/features/new_club_card/representation/identify_cu
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_failure_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_success_screen.dart';
+import 'package:adroit_flutter/features/new_club_card/representation/otp_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/phone_number_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -43,6 +44,8 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: CustomerNameScreen());
     case Routes.home_2:
       return _buildRoute(settings: settings, screen: Home2Screen());
+    case Routes.otp:
+      return _buildRoute(settings: settings, screen: OtpScreen());
     default:
       return _errorRoute();
   }

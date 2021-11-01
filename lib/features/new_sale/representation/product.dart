@@ -5,12 +5,14 @@ class Product {
   String urlImage;
   String productName;
   String productCode;
+  int productPrice;
   double productWeight;
   Product(
       {required this.id,
       required this.urlImage,
       required this.productName,
       required this.productCode,
+      required this.productPrice,
       required this.productWeight});
 }
 
@@ -21,6 +23,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 2,
@@ -28,6 +31,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 3,
@@ -35,6 +39,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 4,
@@ -42,6 +47,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 5,
@@ -49,6 +55,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 6,
@@ -56,6 +63,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 7,
@@ -63,6 +71,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 8,
@@ -70,6 +79,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 9,
@@ -77,6 +87,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 10,
@@ -84,6 +95,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
   Product(
       id: 11,
@@ -91,6 +103,7 @@ List<Product> exampleProducts = [
           'https://images.yaoota.com/xCRBqVtL65pLyQGhUcpST4GM3ik=/trim/yaootaweb-production-ke/media/crawledproductimages/631eb3923a348bf849d08c2349f8cd6094c18d2d.jpg',
       productName: 'Mara Sugar',
       productCode: 'KSH 110',
+      productPrice: 125,
       productWeight: 2),
 ];
 

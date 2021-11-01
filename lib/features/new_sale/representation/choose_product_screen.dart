@@ -214,6 +214,9 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
               bottom: isFinish ? 85 : 10,
               child: FloatingActionButton(
                 onPressed: () {
+                  setState(() {
+                    isFinish = false;
+                  });
                   NavigationService.push(Routes.search_product);
                 },
                 child: AppIcons.search.widget(),

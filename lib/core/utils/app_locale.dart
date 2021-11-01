@@ -31,121 +31,116 @@ import 'package:intl/intl.dart';
 ///
 class LocaleTexts {
   static const appName = 'appName';
-  static const welcomeTo = 'Welcome to';
-  static const shopName = 'Shop Name';
-  static const welcome = 'Welcome!';
-  static const versionBuild = 'Version 0 - Build A';
+  static const welcomeTo = 'welcomeTo';
+  static const shopName = 'shopName';
+  static const welcome = 'welcome';
+  static const versionBuild = 'versionBuild';
 
-  static const newClubCard = 'NEW CLUB CARD';
-  static const newSale = 'NEW SALE';
-  static const delivery = 'DELIVERY';
-  static const myAccount = 'MY ACCOUNT';
-  static const useKokoCanister = 'USE KOKO CANISTER';
-  static const usePhoneNumber = 'USE PHONE NUMBER';
-  static const houseHold = 'HOUSEHOLD';
-  static const commercial = 'COMMERCIAL';
-  static const assignNewClubCard = 'ASSIGN NEW CLUB CARD';
-  static const scanQrCode = 'SCAN QR CODE';
-  static const discountCode = 'DISCOUNT CODE';
+  static const newClubCard = 'newClubCard';
+  static const newSale = 'newSale';
+  static const delivery = 'delivery';
+  static const myAccount = 'myAccount';
+  static const useKokoCanister = 'useKokoCanister';
+  static const usePhoneNumber = 'usePhoneNumber';
+  static const houseHold = 'houseHold';
+  static const commercial = 'commercial';
+  static const assignNewClubCard = 'assignNewClubCard';
+  static const scanQrCode = 'scanQrCode';
+  static const discountCode = 'discountCode';
 
-  static const getCustomerDetailsAppbar = 'Get Customer Detail';
-  static const scanQrCodeAppbar = 'Scan QR Code';
-  static const customerTypeAppbar = 'Customer Type';
-  static const assignClubCardAppbar = 'Assign Club Card';
-  static const successAppbar = 'Success!';
-  static const errorAppbar = 'Error!';
-  static const phoneNumberAppbar = 'Phone Number';
-  static const oneTimePasscodeAppbar = 'One-Time Passcode';
-  static const customerNameAppbar = 'Customer Name';
-  static const identifyCustomerAppbar = 'Identify Customer';
-  static const chooseProducts = 'Choose Product';
-  static const addDiscountAppbar = 'Add Discount?';
-  static const scanFlyerAppbar = 'Scan Flyer QR Code';
-  static const enterDiscountCodeAppbar = 'Enter Discount Code';
-  static const discountAddedAppbar = 'Discount Added!';
-  static const reviewAppbar = 'Review';
-  static const payment = 'Payment';
+  static const getCustomerDetailsAppbar = 'getCustomerDetailsAppbar';
+  static const scanQrCodeAppbar = 'scanQrCodeAppbar';
+  static const customerTypeAppbar = 'customerTypeAppbar';
+  static const assignClubCardAppbar = 'assignClubCardAppbar';
+  static const successAppbar = 'successAppbar';
+  static const errorAppbar = 'errorAppbar';
+  static const phoneNumberAppbar = 'phoneNumberAppbar';
+  static const oneTimePasscodeAppbar = 'oneTimePasscodeAppbar';
+  static const customerNameAppbar = 'customerNameAppbar';
+  static const identifyCustomerAppbar = 'identifyCustomerAppbar';
+  static const chooseProducts = 'chooseProducts';
+  static const addDiscountAppbar = 'addDiscountAppbar';
+  static const scanFlyerAppbar = 'scanFlyerAppbar';
+  static const enterDiscountCodeAppbar = 'enterDiscountCodeAppbar';
+  static const discountAddedAppbar = 'discountAddedAppbar';
+  static const reviewAppbar = 'reviewAppbar';
+  static const payment = 'payment';
 
-  static const doneBtn = 'DONE';
-  static const tryAgainBtn = 'TRY AGAIN';
-  static const nextBtn = 'NEXT';
-  static const proceedBtn = 'PROCEED';
-  static const nodiscountCodeBtn = 'NO DISCOUNT CODE';
-  static const canleBtn = 'CANCLE';
-  static const confirmBtn = 'CONFIRM';
-  static const yesBtn = 'YES';
+  static const doneBtn = 'doneBtn';
+  static const tryAgainBtn = 'tryAgainBtn';
+  static const nextBtn = 'nextBtn';
+  static const proceedBtn = 'proceedBtn';
+  static const nodiscountCodeBtn = 'nodiscountCodeBtn';
+  static const canleBtn = 'canleBtn';
+  static const confirmBtn = 'confirmBtn';
+  static const yesBtn = 'yesBtn';
 
-  static const produceName = 'Joggo Maize Meal';
-  static const productCode = 'KSH 110';
-  static const productWeight = '2';
-  static const productPrice = '250';
+  static const produceName = 'produceName';
+  static const productCode = 'productCode';
+  static const productWeight = 'productWeight';
+  static const productPrice = 'productPrice';
 
-  static const productTotal = '4';
+  static const productTotal = 'productTotal';
 
-  static const qrCode = 'QR Code';
+  static const qrCode = 'qrCode';
 
-  static const pointCameraScanQr1 = 'Point the camera at the ';
-  static const pointCameraScanQr2 = ' printed below the canister';
-  static const verifyingQr = 'Verifying QR Code \n please wait...';
-  static const customerIdentified = 'Customer identified';
-  static const userName = 'Djembe Juma';
-  static const userPhoneNumber = '981-765421';
+  static const pointCameraScanQr1 = 'pointCameraScanQr1';
+  static const pointCameraScanQr2 = 'pointCameraScanQr2';
+  static const verifyingQr = 'verifyingQr';
+  static const customerIdentified = 'customerIdentified';
+  static const userName = 'userName';
+  static const userPhoneNumber = 'userPhoneNumber';
 
-  static const orLine = 'OR';
+  static const orLine = 'orLine';
 
-  static const tapCardDevice = 'Tap the Club Card on the Devide';
-  static const takeOutCard1 = 'Take out a new ';
-  static const clubCard = 'Club Card ';
-  static const takeOutCard2 =
-      ' and Tap it on the Device to link it to the Customer';
-  static const giveClubCard1 = 'Give the ';
-  static const giveClubCard2 = ' to the \n';
-  static const newMember = 'New Member!';
-  static const remindDiscount =
-      'Remind them to use it every time for extra KOKO Club discount.';
+  static const tapCardDevice = 'tapCardDevice';
+  static const takeOutCard1 = 'takeOutCard1';
+  static const clubCard = 'clubCard';
+  static const takeOutCard2 = 'takeOutCard2';
+  static const giveClubCard1 = 'giveClubCard1';
+  static const giveClubCard2 = 'giveClubCard2';
+  static const newMember = 'newMember';
+  static const remindDiscount = 'remindDiscount';
 
-  static const errorScan =
-      'The was an error while scanning the card. \n Please try again.';
+  static const errorScan = 'errorScan';
 
-  static const enterPhoneNumber = 'Enter Customer Phone\nNumber';
-  static const tapNewCustomerFlow = 'Tap for new customer flow';
-  static const tapExistingCustomerFlow = 'Tap for existing customer flow';
-  static const enterCodeSMS = 'Enter Code from SMS';
-  static const askPasscodeSMS =
-      'Ask Customer to give you the One-Time Passcode sent to them via SMS.';
+  static const enterPhoneNumber = 'enterPhoneNumber';
+  static const tapNewCustomerFlow = 'tapNewCustomerFlow';
+  static const tapExistingCustomerFlow = 'tapExistingCustomerFlow';
+  static const enterCodeSMS = 'enterCodeSMS';
+  static const askPasscodeSMS = 'askPasscodeSMS';
 
-  static const waitTime = '1:59';
+  static const waitTime = 'waitTime';
 
-  static const resendOTP = 'Resend OTP - $waitTime sec';
-  static const enterCustomerName = 'Enter Customer Name';
-  static const firstLastName = 'Firtname Lastname';
-  static const topInTown = 'Top In Town';
+  static const resendOTP = 'resendOTP';
+  static const enterCustomerName = 'enterCustomerName';
+  static const firstLastName = 'firstLastName';
+  static const topInTown = 'topInTown';
 
-  static const flourSugar = 'FLOUR & SUGAR';
-  static const dairy = 'DAIRY';
-  static const riceGrain = 'RICE & GRAINS';
+  static const flourSugar = 'flourSugar';
+  static const dairy = 'dairy';
+  static const riceGrain = 'riceGrain';
 
-  static const searchResultFor = 'SEARCH RESULTS FOR';
+  static const searchResultFor = 'searchResultFor';
 
-  static const total = 'Total';
-  static const itemsTotal = '($productTotal) Items';
-  static const billDetail = 'BILL DETAIL';
-  static const subTotal = 'Sub total';
-  static const itemsSubTotal = '($productTotal Items)';
-  static const quantity = 'QUANTITY';
-  static const item = 'ITEM';
-  static const unitPrice = 'UNIT PRICE';
+  static const total = 'total';
+  static const itemsTotal = 'itemsTotal';
+  static const billDetail = 'billDetail';
+  static const subTotal = 'subTotal';
+  static const itemsSubTotal = 'itemsSubTotal';
+  static const quantity = 'quantity';
+  static const item = 'item';
+  static const unitPrice = 'unitPrice';
 
-  static const pointQrFlyer =
-      'Point the camera at the QR Code print on the flyer';
-  static const enterDiscountCode = 'Enter The Discount Code';
-  static const egNumber = 'eg. 07XX XXXXXX';
-  static const tapError = 'Tap for Error';
-  static const tapSuccess = 'Tap for Success';
-  static const discountAddedCeleb = 'KSH 10 OFF on \n Koko Club Items!';
-  static const discountInvialid = 'Invialid Discount Code.\nPlease try again.';
-  static const flyerDiscount = 'Flyer 10 Discount';
-  static const deleteItem = 'Delete ($productTotal) of this item?';
+  static const pointQrFlyer = 'pointQrFlyer';
+  static const enterDiscountCode = 'enterDiscountCode';
+  static const egNumber = 'egNumber';
+  static const tapError = 'tapError';
+  static const tapSuccess = 'tapSuccess';
+  static const discountAddedCeleb = 'discountAddedCeleb';
+  static const discountInvialid = 'discountInvialid';
+  static const flyerDiscount = 'flyerDiscount';
+  static const deleteItem = 'deleteItem';
 }
 
 class AppLocales {

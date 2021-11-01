@@ -84,7 +84,11 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                         showDialog<String>(
                           context: context,
                           builder: (BuildContext context) => AlertDialogConfirm(
-                            confirmOnTap: () {},
+                            confirmOnTap: () {
+                              NavigationService.push(
+                                  Routes.identify_customer_type,
+                                  arguments: 'phone_number');
+                            },
                           ),
                         );
                       },

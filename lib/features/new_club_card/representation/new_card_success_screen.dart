@@ -107,7 +107,7 @@ class _NewCardSuccessScreenState extends State<NewCardSuccessScreen> {
                       boderColor: AppColors.mainBlue,
                       backgroundColor: AppColors.mainBlue,
                       onTap: () {
-                        NavigationService.push(Routes.new_card_failure,
+                        NavigationService.push(Routes.choose_product,
                             replace: true, clean: true);
                       },
                       insideWidget: Padding(

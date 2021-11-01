@@ -79,6 +79,9 @@ abstract class AppIcons {
 
   static AppImageBuilder get koko_club_card =>
       AppImageBuilder(_assetPath + 'koko_club_card.svg');
+
+  static AppImageBuilder get search =>
+      AppImageBuilder(_assetPath + 'search.svg');
 }
 
 class AppImageBuilder {

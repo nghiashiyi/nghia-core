@@ -10,6 +10,8 @@ import 'package:adroit_flutter/features/new_club_card/representation/new_card_su
 import 'package:adroit_flutter/features/new_club_card/representation/otp_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/phone_number_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -46,6 +48,10 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: Home2Screen());
     case Routes.otp:
       return _buildRoute(settings: settings, screen: OtpScreen());
+    case Routes.choose_product:
+      return _buildRoute(settings: settings, screen: ChooseProductScreen());
+    case Routes.search_product:
+      return _buildRoute(settings: settings, screen: SearchProductScreen());
     default:
       return _errorRoute();
   }

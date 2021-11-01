@@ -11,4 +11,6 @@ class Routes {
   static const String customer_name = '/customer_name';
   static const String home_2 = '/home_2';
   static const String otp = '/otp';
+  static const String choose_product = '/choose_product';
+  static const String search_product = '/search_product';
 }

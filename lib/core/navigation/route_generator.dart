@@ -49,13 +49,21 @@ Route<Object>? generateRoute(RouteSettings settings) {
     case Routes.new_card_failure:
       return _buildRoute(settings: settings, screen: NewCardFailureScreen());
     case Routes.phone_number:
-      return _buildRoute(settings: settings, screen: PhoneNumberScreen());
+      return _buildRoute(
+          settings: settings,
+          screen: PhoneNumberScreen(
+            type: args.toString(),
+          ));
     case Routes.customer_name:
       return _buildRoute(settings: settings, screen: CustomerNameScreen());
     case Routes.home_2:
       return _buildRoute(settings: settings, screen: Home2Screen());
     case Routes.otp:
-      return _buildRoute(settings: settings, screen: OtpScreen());
+      return _buildRoute(
+          settings: settings,
+          screen: OtpScreen(
+            type: args.toString(),
+          ));
     case Routes.choose_product:
       return _buildRoute(settings: settings, screen: ChooseProductScreen());
     case Routes.search_product:

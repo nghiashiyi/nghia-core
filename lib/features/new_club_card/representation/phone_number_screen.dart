@@ -12,7 +12,8 @@ import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
 class PhoneNumberScreen extends StatefulWidget {
-  const PhoneNumberScreen({Key? key}) : super(key: key);
+  PhoneNumberScreen({Key? key, required this.type}) : super(key: key);
+  late String type;
 
   @override
   _PhoneNumberScreenState createState() => _PhoneNumberScreenState();
@@ -25,7 +26,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
     final double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: buildAppBarCus(
-          title: LocaleTexts.phoneNumberAppbar,
+          title: LocaleTexts.phoneNumberAppbar.tr(),
           onTap: () {
             Navigator.pop(context);
           }),
@@ -73,29 +74,34 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
                 boderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
-                  showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => AlertDialogLoading(
-                      needHeaderFooter: true,
-                      headerText: LocaleTexts.tapNewCustomerFlow.tr(),
-                      footerText: LocaleTexts.tapExistingCustomerFlow.tr(),
-                      onTapHeader: () {
-                        NavigationService.push(Routes.customer_name);
-                      },
-                      onTapFooter: () {
-                        showDialog<String>(
-                          context: context,
-                          builder: (BuildContext context) => AlertDialogConfirm(
-                            confirmOnTap: () {
-                              NavigationService.push(
-                                  Routes.identify_customer_type,
-                                  arguments: 'phone_number');
-                            },
-                          ),
-                        );
-                      },
-                    ),
-                  );
+                  if (widget.type == 'new_sale') {
+                    NavigationService.push(Routes.otp, arguments: 'new_sale');
+                  } else {
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialogLoading(
+                        needHeaderFooter: true,
+                        headerText: LocaleTexts.tapNewCustomerFlow.tr(),
+                        footerText: LocaleTexts.tapExistingCustomerFlow.tr(),
+                        onTapHeader: () {
+                          NavigationService.push(Routes.customer_name);
+                        },
+                        onTapFooter: () {
+                          showDialog<String>(
+                            context: context,
+                            builder: (BuildContext context) =>
+                                AlertDialogConfirm(
+                              confirmOnTap: () {
+                                NavigationService.push(
+                                    Routes.identify_customer_type,
+                                    arguments: 'phone_number');
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  }
                 },
                 insideWidget: Padding(
                   padding: EdgeInsets.all(paddingCont),

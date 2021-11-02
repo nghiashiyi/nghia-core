@@ -42,8 +42,9 @@ class _IdentifyCustomer2ScreenState extends State<IdentifyCustomer2Screen> {
               width: width,
               child: MenuWidget(
                 onTap: () {
-                  NavigationService.push(Routes.tap_club_card,
-                      arguments: 'card');
+                  NavigationService.push(
+                    Routes.tap_club_card,
+                  );
                 },
                 title: LocaleTexts.useClubCard.tr(),
                 icon: Container(
@@ -80,7 +81,8 @@ class _IdentifyCustomer2ScreenState extends State<IdentifyCustomer2Screen> {
               width: width,
               child: MenuWidget(
                 onTap: () {
-                  NavigationService.push(Routes.phone_number);
+                  NavigationService.push(Routes.phone_number,
+                      arguments: 'new_sale');
                 },
                 title: LocaleTexts.usePhoneNumber.tr(),
                 icon: Container(

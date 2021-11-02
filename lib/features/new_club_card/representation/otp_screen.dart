@@ -13,8 +13,8 @@ import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({Key? key}) : super(key: key);
-
+  OtpScreen({Key? key, required this.type}) : super(key: key);
+  late String type;
   @override
   _OtpScreenState createState() => _OtpScreenState();
 }
@@ -88,7 +88,11 @@ class _OtpScreenState extends State<OtpScreen> {
                 boderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
-                  NavigationService.push(Routes.new_card);
+                  if (widget.type == 'new_sale') {
+                    NavigationService.push(Routes.choose_product);
+                  } else {
+                    NavigationService.push(Routes.new_card);
+                  }
                 },
                 insideWidget: Padding(
                   padding: EdgeInsets.all(paddingCont),

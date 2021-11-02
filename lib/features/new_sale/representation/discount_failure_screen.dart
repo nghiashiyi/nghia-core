@@ -1,42 +1,34 @@
 import 'package:adroit_flutter/core/navigation/navigation_service.dart';
 import 'package:adroit_flutter/core/navigation/routes.dart';
-import 'package:adroit_flutter/core/utils/app_constants.dart';
-import 'package:flutter/material.dart';
 import 'package:adroit_flutter/core/utils/app_color.dart';
+import 'package:adroit_flutter/core/utils/app_constants.dart';
 import 'package:adroit_flutter/core/utils/app_icons.dart';
 import 'package:adroit_flutter/core/utils/app_locale.dart';
+import 'package:adroit_flutter/core/widgets/appbar_cus.dart';
 import 'package:adroit_flutter/core/widgets/cus_btn.dart';
-import 'package:adroit_flutter/core/widgets/user_info_panel.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
-class NewCardFailureScreen extends StatefulWidget {
-  const NewCardFailureScreen({Key? key}) : super(key: key);
+class DiscountFailureScreen extends StatefulWidget {
+  const DiscountFailureScreen({Key? key}) : super(key: key);
 
   @override
-  _NewCardFailureScreenState createState() => _NewCardFailureScreenState();
+  _DiscountFailureScreenState createState() => _DiscountFailureScreenState();
 }
 
-class _NewCardFailureScreenState extends State<NewCardFailureScreen> {
+class _DiscountFailureScreenState extends State<DiscountFailureScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: AppColors.mainYellow,
-        title: Text(
-          LocaleTexts.errorAppbar.tr(),
-          style: TextStyle(
-              color: AppColors.mainBlue,
-              fontSize: 18,
-              fontWeight: FontWeight.w500),
-        ),
-      ),
+      appBar: buildAppBarCus(
+          title: LocaleTexts.errorAppbar.tr(),
+          onTap: () {
+            Navigator.pop(context);
+          }),
       body: Column(
         children: [
-          UserInfoPanel(width: width),
           Expanded(
               flex: 5,
               child: Padding(
@@ -51,7 +43,7 @@ class _NewCardFailureScreenState extends State<NewCardFailureScreen> {
                             alignment: Alignment.center,
                             child: AppIcons.false_icon.widget()),
                         Text(
-                          LocaleTexts.errorScan.tr(),
+                          LocaleTexts.discountInvialid.tr(),
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: AppColors.black,

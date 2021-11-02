@@ -1,3 +1,5 @@
+import 'package:adroit_flutter/core/navigation/navigation_service.dart';
+import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/core/utils/app_color.dart';
 import 'package:adroit_flutter/core/utils/app_images.dart';
 import 'package:adroit_flutter/core/utils/app_locale.dart';
@@ -40,9 +42,14 @@ class _DiscountScanScreenState extends State<DiscountScanScreen> {
                       onTap: () {
                         showDialog<String>(
                             context: context,
-                            builder: (BuildContext context) =>
-                                AlertDialogLoading(
-                                    onTapHeader: () {}, onTapFooter: () {}));
+                            builder: (BuildContext context) => GestureDetector(
+                                  onTap: () {
+                                    NavigationService.push(
+                                        Routes.discount_failure);
+                                  },
+                                  child: AlertDialogLoading(
+                                      onTapHeader: () {}, onTapFooter: () {}),
+                                ));
                       },
                       child: Container(
                         height: 140,

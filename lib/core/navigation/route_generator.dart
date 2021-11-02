@@ -2,6 +2,7 @@ import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/features/home/representation/home_2_screen.dart';
 import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/customer_name_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/discount_failure_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/discount_scan_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_type_screen.dart';
@@ -14,6 +15,7 @@ import 'package:adroit_flutter/features/new_club_card/representation/review_scre
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/discount_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/discount_success_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +63,10 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: DiscountScreen());
     case Routes.discount_scan:
       return _buildRoute(settings: settings, screen: DiscountScanScreen());
+    case Routes.discount_success:
+      return _buildRoute(settings: settings, screen: DiscountSuccessScreen());
+    case Routes.discount_failure:
+      return _buildRoute(settings: settings, screen: DiscountFailureScreen());
     default:
       return _errorRoute();
   }

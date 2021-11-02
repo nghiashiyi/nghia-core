@@ -138,6 +138,11 @@ class LocaleTexts {
   static const tapError = 'tapError';
   static const tapSuccess = 'tapSuccess';
   static const discountAddedCeleb = 'discountAddedCeleb';
+  static const on = 'on';
+  static const items = 'items';
+
+  static const kokoClub = 'kokoClub';
+
   static const discountInvialid = 'discountInvialid';
   static const flyerDiscount = 'flyerDiscount';
   static const deleteItem = 'deleteItem';

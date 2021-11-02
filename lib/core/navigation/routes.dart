@@ -16,4 +16,6 @@ class Routes {
   static const String review = '/review';
   static const String discount = '/discount';
   static const String discount_scan = '/discount_scan';
+  static const String discount_success = '/discount_success';
+  static const String discount_failure = '/discount_failure';
 }

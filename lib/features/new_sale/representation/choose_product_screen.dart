@@ -18,6 +18,9 @@ class ChooseProductScreen extends StatefulWidget {
 }
 
 class _ChooseProductScreenState extends State<ChooseProductScreen> {
+  List<Product> addedProduct = [];
+  bool isFinish = false;
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -86,60 +89,14 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
                               itemBuilder: (context, index) {
                                 Product exampleProduct = exampleProducts[index];
                                 return ProductCatalogue(
-                                  exampleProduct: exampleProduct,
                                   product: exampleProduct,
-                                );
-                              }),
-                        ),
-                        Text(
-                          LocaleTexts.dairy.tr(),
-                          style: TextStyle(
-                              color: AppColors.mainBlue,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Container(
-                          width: width,
-                          height: 170,
-                          child: GridView.builder(
-                              physics: NeverScrollableScrollPhysics(),
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 4,
-                              ),
-                              itemCount: 6,
-                              itemBuilder: (context, index) {
-                                Product exampleProduct =
-                                    exampleProducts[index + 1];
-                                return ProductCatalogue(
-                                  exampleProduct: exampleProduct,
-                                  product: exampleProduct,
-                                );
-                              }),
-                        ),
-                        Text(
-                          LocaleTexts.riceGrain.tr(),
-                          style: TextStyle(
-                              color: AppColors.mainBlue,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500),
-                        ),
-                        Container(
-                          width: width,
-                          height: 300,
-                          child: GridView.builder(
-                              physics: NeverScrollableScrollPhysics(),
-                              gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 4,
-                              ),
-                              itemCount: 10,
-                              itemBuilder: (context, index) {
-                                Product exampleProduct =
-                                    exampleProducts[index + 1];
-                                return ProductCatalogue(
-                                  exampleProduct: exampleProduct,
-                                  product: exampleProduct,
+                                  onItemQuantityChanged: (int quantity) {
+                                    setState(() {
+                                      addedProduct.add(exampleProduct);
+                                      isFinish = true;
+                                    });
+                                  },
+                                  quantity: addedProduct.isNotEmpty ? 1 : 0,
                                 );
                               }),
                         ),
@@ -165,12 +122,12 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${LocaleTexts.total.tr()} ${productAddeds[0].productCode}',
+                                '${LocaleTexts.total.tr()} ${addedProduct[0].productCode}',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 16),
                               ),
                               Text(
-                                '(${productAddeds.length}) ${LocaleTexts.itemsTotal.tr()}',
+                                '(${addedProduct.length}) ${LocaleTexts.itemsTotal.tr()}',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400, fontSize: 12),
                               ),
@@ -209,20 +166,6 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
                     ),
                   )
                 : Container(),
-            Positioned(
-              right: 10,
-              bottom: isFinish ? 85 : 10,
-              child: FloatingActionButton(
-                onPressed: () {
-                  setState(() {
-                    isFinish = false;
-                  });
-                  NavigationService.push(Routes.search_product);
-                },
-                child: AppIcons.search.widget(),
-                backgroundColor: AppColors.mainYellow,
-              ),
-            )
           ],
         ),
       ),

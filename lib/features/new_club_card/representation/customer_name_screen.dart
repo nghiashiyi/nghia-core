@@ -61,7 +61,7 @@ class _CustomerNameScreenState extends State<CustomerNameScreen> {
             ),
             CusBtn(
                 width: width,
-                boderColor: AppColors.mainBlue,
+                borderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
                   NavigationService.push(Routes.identify_customer_type,

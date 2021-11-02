@@ -70,7 +70,7 @@ class _NewCardFailureScreenState extends State<NewCardFailureScreen> {
                   children: [
                     CusBtn(
                       width: width,
-                      boderColor: AppColors.mainBlue,
+                      borderColor: AppColors.mainBlue,
                       backgroundColor: AppColors.mainBlue,
                       onTap: () {},
                       insideWidget: Padding(
@@ -105,7 +105,7 @@ class _NewCardFailureScreenState extends State<NewCardFailureScreen> {
                     ),
                     CusBtn(
                         width: width,
-                        boderColor: AppColors.mainBlue,
+                        borderColor: AppColors.mainBlue,
                         backgroundColor: AppColors.white,
                         onTap: () {
                           NavigationService.push(Routes.home,

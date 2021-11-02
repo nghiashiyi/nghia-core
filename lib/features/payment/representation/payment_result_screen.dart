@@ -24,7 +24,7 @@ class _PaymentResultScreenState extends State<PaymentResultScreen> {
       appBar: buildCloseAppBarCus(
           title: LocaleTexts.paymentComplete.tr(),
           onTap: () {
-            Navigator.pop(context);
+            Navigator.of(context).popUntil((route) => route.isFirst);
           }),
       body: SafeArea(
           child: ListView(

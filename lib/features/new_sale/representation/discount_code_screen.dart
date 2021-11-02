@@ -67,7 +67,7 @@ class _DiscountCodeScreenState extends State<DiscountCodeScreen> {
             ),
             CusBtn(
                 width: width,
-                boderColor: AppColors.mainBlue,
+                borderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
                   showDialog<String>(

@@ -1,4 +1,4 @@
-bool isFinish = false;
+
 
 class Product {
   int id;
@@ -106,5 +106,3 @@ List<Product> exampleProducts = [
       productPrice: 125,
       productWeight: 2),
 ];
-
-List<Product> productAddeds = [];

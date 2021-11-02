@@ -6,23 +6,35 @@ import 'package:adroit_flutter/features/new_sale/representation/product.dart';
 import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
+typedef OnItemQuantityChanged = Function(int quantity);
+
 class ProductCatalogue extends StatefulWidget {
   const ProductCatalogue({
     Key? key,
-    required this.exampleProduct,
     required this.product,
+    this.quantity = 0,
+    required this.onItemQuantityChanged,
   }) : super(key: key);
 
-  final Product exampleProduct;
   final Product product;
+  final int quantity;
+  final OnItemQuantityChanged onItemQuantityChanged;
 
   @override
   State<ProductCatalogue> createState() => _ProductCatalogueState();
 }
 
 class _ProductCatalogueState extends State<ProductCatalogue> {
-  getBorderColor() {
-    if (productAddeds.length > 1 && widget.product.id == 1) {
+  int _quantity = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _quantity = widget.quantity;
+  }
+
+  Widget updateBorderColor() {
+    if (_quantity > 1 && widget.product.id == 1) {
       return Padding(
         padding: EdgeInsets.all(paddingCont / 4),
         child: Material(
@@ -37,7 +49,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
                     borderRadius: BorderRadius.circular(6)),
                 child: Container(
                     margin: EdgeInsets.all(paddingCont / 2),
-                    child: Image.network(widget.exampleProduct.urlImage)),
+                    child: Image.network(widget.product.urlImage)),
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -50,7 +62,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
                       borderRadius:
                           BorderRadius.only(topRight: Radius.circular(6))),
                   child: Text(
-                    productAddeds.length.toString(),
+                    _quantity.toString(),
                     style: TextStyle(
                         color: AppColors.white,
                         fontSize: 12,
@@ -71,7 +83,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
               borderRadius: BorderRadius.circular(6)),
           child: Container(
               margin: EdgeInsets.all(paddingCont / 2),
-              child: Image.network(widget.exampleProduct.urlImage)),
+              child: Image.network(widget.product.urlImage)),
         ),
       );
     }
@@ -177,24 +189,16 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
                                     GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            if (productAddeds.length > 0) {
-                                              productAddeds
-                                                  .remove(widget.product);
-                                            }
+                                            _quantity -= 1;
                                           });
                                         },
-                                        child: isFinish
-                                            ? AppIcons.delete_circle.widget(
-                                                height: 40,
-                                              )
-                                            : AppIcons.remove_circle.widget(
-                                                height: 40,
-                                                color:
-                                                    (productAddeds.length > 0)
-                                                        ? AppColors.mainBlue
-                                                        : null)),
+                                        child: AppIcons.remove_circle.widget(
+                                            height: 40,
+                                            color: (_quantity > 0)
+                                                ? AppColors.mainBlue
+                                                : null)),
                                     Text(
-                                      productAddeds.length.toString(),
+                                      _quantity.toString(),
                                       style: TextStyle(
                                           fontSize: 24,
                                           fontWeight: FontWeight.w700),
@@ -202,8 +206,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
                                     GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            productAddeds.add(widget.product);
-                                            print(productAddeds.length);
+                                            _quantity += 1;
                                           });
                                         },
                                         child: AppIcons.add_circle
@@ -213,10 +216,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  setState(() {
-                                    getBorderColor();
-                                    isFinish = true;
-                                  });
+                                  widget.onItemQuantityChanged(_quantity);
                                   Navigator.pop(context);
                                 },
                                 child: Container(
@@ -253,7 +253,7 @@ class _ProductCatalogueState extends State<ProductCatalogue> {
           },
         );
       },
-      child: getBorderColor(),
+      child: updateBorderColor(),
     );
   }
 }

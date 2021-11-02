@@ -247,20 +247,22 @@ class _PaymentScreenState extends State<PaymentScreen> {
   Widget _button() {
     return CusBtn(
         width: MediaQuery.of(context).size.width,
-        boderColor: AppColors.mainBlue,
+        borderColor: AppColors.mainBlue,
         backgroundColor: AppColors.mainBlue,
         onTap: () {
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialogLoading(
               needHeaderFooter: true,
+              headerText: 'Tap for Error',
+              footerText: 'Tap for Success',
               onTapHeader: () {
                 Navigator.of(context).pop();
-                _showDialogSuccess();
+                _showDialogFailed();
               },
               onTapFooter: () {
                 Navigator.of(context).pop();
-                _showDialogFailed();
+                _showDialogSuccess();
               },
             ),
           );

@@ -71,7 +71,7 @@ class _PhoneNumberScreenState extends State<PhoneNumberScreen> {
             ),
             CusBtn(
                 width: width,
-                boderColor: AppColors.mainBlue,
+                borderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
                   if (widget.type == 'new_sale') {

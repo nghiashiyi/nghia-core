@@ -99,7 +99,7 @@ class _DiscountSuccessScreenState extends State<DiscountSuccessScreen> {
             padding: const EdgeInsets.all(10),
             child: CusBtn(
                 width: width,
-                boderColor: AppColors.mainBlue,
+                borderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
                   NavigationService.push(Routes.review,

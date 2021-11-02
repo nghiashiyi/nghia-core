@@ -62,7 +62,7 @@ class _DiscountFailureScreenState extends State<DiscountFailureScreen> {
                   children: [
                     CusBtn(
                       width: width,
-                      boderColor: AppColors.mainBlue,
+                      borderColor: AppColors.mainBlue,
                       backgroundColor: AppColors.mainBlue,
                       onTap: () {},
                       insideWidget: Padding(
@@ -97,7 +97,7 @@ class _DiscountFailureScreenState extends State<DiscountFailureScreen> {
                     ),
                     CusBtn(
                         width: width,
-                        boderColor: AppColors.mainBlue,
+                        borderColor: AppColors.mainBlue,
                         backgroundColor: AppColors.white,
                         onTap: () {
                           NavigationService.push(Routes.home,

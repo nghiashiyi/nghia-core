@@ -104,7 +104,7 @@ class _NewCardSuccessScreenState extends State<NewCardSuccessScreen> {
                   children: [
                     CusBtn(
                       width: width,
-                      boderColor: AppColors.mainBlue,
+                      borderColor: AppColors.mainBlue,
                       backgroundColor: AppColors.mainBlue,
                       onTap: () {
                         NavigationService.push(Routes.choose_product);
@@ -129,7 +129,7 @@ class _NewCardSuccessScreenState extends State<NewCardSuccessScreen> {
                     ),
                     CusBtn(
                         width: width,
-                        boderColor: AppColors.mainBlue,
+                        borderColor: AppColors.mainBlue,
                         backgroundColor: AppColors.white,
                         onTap: () {
                           NavigationService.push(Routes.home,

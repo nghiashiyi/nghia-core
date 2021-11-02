@@ -89,29 +89,27 @@ class _DiscountScreenState extends State<DiscountScreen> {
                         child: AppIcons.pin_code.widget(fit: BoxFit.fitWidth)),
                   ),
                 )),
-            Expanded(
-              flex: 1,
-              child: Container(
-                margin: EdgeInsets.only(top: paddingCont * 3),
-                child: CusBtn(
-                    width: width,
-                    boderColor: AppColors.darkGray,
-                    backgroundColor: AppColors.white,
-                    onTap: () {
-                      NavigationService.push(Routes.review,
-                          arguments: 'finish_discount');
-                    },
-                    insideWidget: Padding(
-                      padding: EdgeInsets.all(paddingCont),
-                      child: Text(
-                        LocaleTexts.nodiscountCodeBtn.tr(),
-                        style: TextStyle(
-                            color: AppColors.mainBlue,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    )),
-              ),
+            Container(
+              margin: EdgeInsets.only(top: paddingCont * 3),
+              child: CusBtn(
+                  width: width,
+                  height: 60,
+                  borderColor: AppColors.darkGray,
+                  backgroundColor: AppColors.white,
+                  onTap: () {
+                    NavigationService.push(Routes.review,
+                        arguments: 'finish_discount');
+                  },
+                  insideWidget: Padding(
+                    padding: EdgeInsets.all(paddingCont),
+                    child: Text(
+                      LocaleTexts.nodiscountCodeBtn.tr(),
+                      style: TextStyle(
+                          color: AppColors.mainBlue,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  )),
             )
           ],
         ),

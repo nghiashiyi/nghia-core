@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 class CusBtn extends StatelessWidget {
   const CusBtn(
       {Key? key,
-      required this.width,
-      required this.boderColor,
+      required this.width, this.height,
+      required this.borderColor,
       required this.backgroundColor,
       required this.onTap,
       required this.insideWidget})
       : super(key: key);
 
   final double width;
-  final Color boderColor;
+  final double? height;
+  final Color borderColor;
   final Color backgroundColor;
   final Widget insideWidget;
   final Function() onTap;
@@ -21,10 +22,10 @@ class CusBtn extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: width,
-        height: 40,
+        height: height ?? 40,
         decoration: BoxDecoration(
             color: backgroundColor,
-            border: Border.all(color: boderColor),
+            border: Border.all(color: borderColor),
             borderRadius: BorderRadius.circular(38)),
         child: Center(child: insideWidget),
       ),

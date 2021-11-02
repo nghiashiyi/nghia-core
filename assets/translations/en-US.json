@@ -133,5 +133,9 @@
   "paid": "Paid(Payment Mode):",
   "memberName": "Member Name:",
   "discountOnNextSale": "Discount on Next Sale:",
-  "discountExpired": "Discount Expires on:"
+  "discountExpired": "Discount Expires on:",
+  "flyerDiscount": "Flyer 10 Discount",
+  "minus10": "-10",
+  "repeatPurchase": "-10% OFF - Repeat Purcharse",
+  "minus64": "-64"
 }

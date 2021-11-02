@@ -80,7 +80,9 @@ class _DiscountCodeScreenState extends State<DiscountCodeScreen> {
                             NavigationService.push(Routes.discount_failure);
                           },
                           onTapFooter: () {
-                            NavigationService.push(Routes.discount_success);
+                            NavigationService.push(
+                              Routes.discount_success,
+                            );
                           }));
                 },
                 insideWidget: Padding(

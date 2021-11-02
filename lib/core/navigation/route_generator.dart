@@ -71,7 +71,11 @@ Route<Object>? generateRoute(RouteSettings settings) {
     case Routes.search_product:
       return _buildRoute(settings: settings, screen: SearchProductScreen());
     case Routes.review:
-      return _buildRoute(settings: settings, screen: ReviewScreen());
+      return _buildRoute(
+          settings: settings,
+          screen: ReviewScreen(
+            isFinishDiscount: args.toString(),
+          ));
     case Routes.discount:
       return _buildRoute(settings: settings, screen: DiscountScreen());
     case Routes.discount_scan:

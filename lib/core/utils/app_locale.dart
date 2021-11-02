@@ -144,7 +144,7 @@ class LocaleTexts {
   static const kokoClub = 'kokoClub';
 
   static const discountInvialid = 'discountInvialid';
-  static const flyerDiscount = 'flyerDiscount';
+
   static const deleteItem = 'deleteItem';
   static const removeItem = 'removeItem';
   static const deleteOfThisItem = 'deleteOfThisItem';
@@ -173,8 +173,10 @@ class LocaleTexts {
   static const retryBtn = 'retryBtn';
   static const paymentFailed = 'paymentFailed';
   static const tryAgainOrCancel = 'tryAgainOrCancel';
-  static const customerDescriptionPaymentSuccess = 'customerDescriptionPaymentSuccess';
-  static const agentDescriptionPaymentSuccess = 'agentDescriptionPaymentSuccess';
+  static const customerDescriptionPaymentSuccess =
+      'customerDescriptionPaymentSuccess';
+  static const agentDescriptionPaymentSuccess =
+      'agentDescriptionPaymentSuccess';
   static const paymentSuccessful = 'paymentSuccessful';
   static const paymentComplete = 'paymentComplete';
   static const orderId = 'orderId';
@@ -182,6 +184,10 @@ class LocaleTexts {
   static const memberName = 'memberName';
   static const discountOnNextSale = 'discountOnNextSale';
   static const discountExpired = 'discountExpired';
+  static const flyerDiscount = 'flyerDiscount';
+  static const minus10 = 'minus10';
+  static const repeatPurchase = 'repeatPurchase';
+  static const minus64 = 'minus64';
 }
 
 class AppLocales {

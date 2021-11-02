@@ -102,9 +102,8 @@ class _DiscountSuccessScreenState extends State<DiscountSuccessScreen> {
                 boderColor: AppColors.mainBlue,
                 backgroundColor: AppColors.mainBlue,
                 onTap: () {
-                  NavigationService.push(
-                    Routes.review,
-                  );
+                  NavigationService.push(Routes.review,
+                      arguments: 'finish_discount');
                 },
                 insideWidget: Padding(
                   padding: EdgeInsets.all(paddingCont),

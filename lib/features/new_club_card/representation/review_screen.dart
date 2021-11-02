@@ -10,8 +10,8 @@ import 'package:easy_localization/src/public_ext.dart';
 import 'package:flutter/material.dart';
 
 class ReviewScreen extends StatefulWidget {
-  const ReviewScreen({Key? key}) : super(key: key);
-
+  ReviewScreen({Key? key, required this.isFinishDiscount}) : super(key: key);
+  late String isFinishDiscount;
   @override
   _ReviewScreenState createState() => _ReviewScreenState();
 }
@@ -21,6 +21,8 @@ class _ReviewScreenState extends State<ReviewScreen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
+    bool isDiscount = (widget.isFinishDiscount == 'finish_discount');
     return Scaffold(
       appBar: buildAppBarCus(
           title: LocaleTexts.reviewAppbar.tr(),
@@ -113,7 +115,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           height: paddingCont,
                         ),
                         Container(
-                          height: height * 0.5,
+                          height: height * 0.4,
                           child: ListView.builder(
                               itemCount: productAddeds.length,
                               itemBuilder: (context, index) {
@@ -591,6 +593,58 @@ class _ReviewScreenState extends State<ReviewScreen> {
                             ],
                           ),
                         ),
+                        SizedBox(
+                          height: paddingCont / 2,
+                        ),
+                        isDiscount
+                            ? Column(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: paddingCont),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          LocaleTexts.flyerDiscount.tr(),
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                        Text(
+                                          LocaleTexts.minus10.tr(),
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: AppColors.otherGreen),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: paddingCont / 2,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: paddingCont),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          LocaleTexts.repeatPurchase.tr(),
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                        Text(
+                                          LocaleTexts.minus64.tr(),
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: AppColors.otherGreen),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )
+                            : Container(),
                       ],
                     ),
                   ),
@@ -608,10 +662,37 @@ class _ReviewScreenState extends State<ReviewScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                '${LocaleTexts.total.tr()} ${productAddeds[0].productCode}',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              Row(
+                                children: [
+                                  Text(
+                                    LocaleTexts.total.tr(),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  isDiscount
+                                      ? Text(
+                                          LocaleTexts.productPrice.tr(),
+                                          style: TextStyle(
+                                              color: AppColors.darkGray,
+                                              fontSize: 12,
+                                              decoration:
+                                                  TextDecoration.lineThrough),
+                                        )
+                                      : Container(),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Text(
+                                    productAddeds[0].productCode.tr(),
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14),
+                                  ),
+                                ],
                               ),
                               Text(
                                 '(${productAddeds.length}) ${LocaleTexts.itemsTotal.tr()}',
@@ -622,7 +703,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              NavigationService.push(Routes.discount);
+                              isDiscount
+                                  ? NavigationService.push(Routes.payment)
+                                  : NavigationService.push(Routes.discount);
                             },
                             child: Container(
                               height: 50,

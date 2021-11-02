@@ -18,7 +18,7 @@ class KoKoApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Montserrat",
       ),
-      initialRoute: Routes.paymentResult,
+      initialRoute: Routes.home,
       onGenerateRoute: generateRoute,
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigationService.globalNavigatorKey,

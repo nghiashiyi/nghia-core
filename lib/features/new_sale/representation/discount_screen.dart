@@ -98,7 +98,8 @@ class _DiscountScreenState extends State<DiscountScreen> {
                     boderColor: AppColors.darkGray,
                     backgroundColor: AppColors.white,
                     onTap: () {
-                      Navigator.pop(context);
+                      NavigationService.push(Routes.review,
+                          arguments: 'finish_discount');
                     },
                     insideWidget: Padding(
                       padding: EdgeInsets.all(paddingCont),

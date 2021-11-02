@@ -21,4 +21,6 @@ class Routes {
   static const String discount_code = '/discount_code';
   static const String identify_customer_2 = '/identify_customer_2';
   static const String tap_club_card = '/tap_club_card';
+  static const String payment = '/payment';
+  static const String paymentResult = '/paymentResult';
 }

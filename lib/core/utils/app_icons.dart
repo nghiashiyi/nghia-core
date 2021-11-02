@@ -111,6 +111,11 @@ abstract class AppIcons {
 
   static AppImageBuilder get qr_code_scanner =>
       AppImageBuilder(_assetPath + 'qr_code_scanner.svg');
+
+  static AppImageBuilder get koko_icon =>
+      AppImageBuilder(_assetPath + 'koko_icon.svg');
+  static AppImageBuilder get close =>
+      AppImageBuilder(_assetPath + 'close.svg');
 }
 
 class AppImageBuilder {

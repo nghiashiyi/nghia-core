@@ -129,6 +129,7 @@ class LocaleTexts {
   static const itemsSubTotal = 'itemsSubTotal';
   static const quantity = 'quantity';
   static const item = 'item';
+  static const items = 'items';
   static const unitPrice = 'unitPrice';
 
   static const pointQrFlyer1 = 'pointQrFlyer1';
@@ -154,6 +155,34 @@ class LocaleTexts {
   static const useClubCard = 'useClubCard';
   static const askTapCard1 = 'askTapCard1';
   static const askTapCard2 = 'askTapCard2';
+  static const ksh = 'ksh';
+  static const directCustomerWalletPayment = 'directCustomerWalletPayment';
+  static const cashPaymentViaAgent = 'cashPaymentViaAgent';
+  static const customerBalance = 'customerBalance';
+  static const agentBalance = 'agentBalance';
+  static const agentName = 'agentName';
+  static const customer = 'customer';
+  static const agent = 'agent';
+  static const myKokoPin = 'myKokoPin';
+  static const forLocale = 'forLocale';
+  static const toPay = 'toPay';
+  static const and = 'and';
+  static const collectCash = 'collectCash';
+  static const pleaseEnterYour = 'pleaseEnterYour';
+  static const fromTheCustomer = 'fromTheCustomer';
+  static const customerDescPin = 'customerDescPin';
+  static const retryBtn = 'retryBtn';
+  static const paymentFailed = 'paymentFailed';
+  static const tryAgainOrCancel = 'tryAgainOrCancel';
+  static const customerDescriptionPaymentSuccess = 'customerDescriptionPaymentSuccess';
+  static const agentDescriptionPaymentSuccess = 'agentDescriptionPaymentSuccess';
+  static const paymentSuccessful = 'paymentSuccessful';
+  static const paymentComplete = 'paymentComplete';
+  static const orderId = 'orderId';
+  static const paid = 'paid';
+  static const memberName = 'memberName';
+  static const discountOnNextSale = 'discountOnNextSale';
+  static const discountExpired = 'discountExpired';
 }
 
 class AppLocales {

@@ -2,9 +2,6 @@ import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/features/home/representation/home_2_screen.dart';
 import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/customer_name_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/discount_code_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/discount_failure_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/discount_scan_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_type_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_failure_screen.dart';
@@ -12,14 +9,9 @@ import 'package:adroit_flutter/features/new_club_card/representation/new_card_sc
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_success_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/otp_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/phone_number_screen.dart';
-import 'package:adroit_flutter/features/new_club_card/representation/review_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/discount_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/discount_success_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/identify_customer_2_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
-import 'package:adroit_flutter/features/new_sale/representation/tap_club_card_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -84,6 +76,10 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: IdentifyCustomer2Screen());
     case Routes.tap_club_card:
       return _buildRoute(settings: settings, screen: TapClubCardScreen());
+    case Routes.payment:
+      return _buildRoute(settings: settings, screen: PaymentScreen());
+    case Routes.paymentResult:
+      return _buildRoute(settings: settings, screen: PaymentResultScreen());
     default:
       return _errorRoute();
   }

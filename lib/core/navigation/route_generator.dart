@@ -12,6 +12,8 @@ import 'package:adroit_flutter/features/new_club_card/representation/phone_numbe
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
+import 'package:adroit_flutter/features/payment/representation/payment_result_screen.dart';
+import 'package:adroit_flutter/features/payment/representation/payment_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -52,6 +54,10 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: ChooseProductScreen());
     case Routes.search_product:
       return _buildRoute(settings: settings, screen: SearchProductScreen());
+    case Routes.payment:
+      return _buildRoute(settings: settings, screen: PaymentScreen());
+    case Routes.paymentResult:
+      return _buildRoute(settings: settings, screen: PaymentResultScreen());
     default:
       return _errorRoute();
   }

@@ -13,4 +13,6 @@ class Routes {
   static const String otp = '/otp';
   static const String choose_product = '/choose_product';
   static const String search_product = '/search_product';
+  static const String payment = '/payment';
+  static const String paymentResult = '/paymentResult';
 }

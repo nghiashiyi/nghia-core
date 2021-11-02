@@ -140,7 +140,6 @@ class LocaleTexts {
   static const tapSuccess = 'tapSuccess';
   static const discountAddedCeleb = 'discountAddedCeleb';
   static const on = 'on';
-  static const items = 'items';
 
   static const kokoClub = 'kokoClub';
 

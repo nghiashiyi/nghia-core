@@ -11,12 +11,16 @@ class AlertDialogLoading extends StatelessWidget {
   AlertDialogLoading(
       {Key? key,
       this.needHeaderFooter = false,
+      this.headerText = '',
+      this.footerText = '',
       required this.onTapHeader,
       required this.onTapFooter})
       : super(key: key);
 
   final bool needHeaderFooter;
+  final String headerText;
   Function() onTapHeader;
+  final String footerText;
   Function() onTapFooter;
 
   @override
@@ -32,7 +36,7 @@ class AlertDialogLoading extends StatelessWidget {
                 ? GestureDetector(
                     onTap: onTapHeader,
                     child: Text(
-                      LocaleTexts.tapNewCustomerFlow.tr(),
+                      headerText,
                       style: TextStyle(fontSize: 9, color: AppColors.darkGray),
                     ),
                   )
@@ -47,7 +51,7 @@ class AlertDialogLoading extends StatelessWidget {
                 ? GestureDetector(
                     onTap: onTapFooter,
                     child: Text(
-                      LocaleTexts.tapExistingCustomerFlow.tr(),
+                      footerText,
                       style: TextStyle(fontSize: 9, color: AppColors.darkGray),
                     ),
                   )

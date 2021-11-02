@@ -26,7 +26,7 @@ class _ChooseProductScreenState extends State<ChooseProductScreen> {
       appBar: buildAppBarCus(
           title: LocaleTexts.chooseProducts.tr(),
           onTap: () {
-            Navigator.pop(context);
+            NavigationService.push(Routes.home, replace: true, clean: true);
           }),
       body: Container(
         width: width,

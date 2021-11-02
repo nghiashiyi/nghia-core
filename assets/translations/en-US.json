@@ -99,6 +99,10 @@
   "flyerDiscount": "Flyer 10 Discount",
   "deleteOfThisItem": "Delete (1) of this item?",
   "removeItem": "Remove Item?",
-  "kg": "kg"
-
+  "kg": "kg",
+  "tapForError": "Tap for Error",
+  "tapForSuccess": "Tap for Success",
+  "useClubCard": "USE CLUB CARD",
+  "askTapCard1": "Ask the customer to tap the ",
+  "askTapCard2": "on the device."
 }

@@ -149,6 +149,11 @@ class LocaleTexts {
   static const removeItem = 'removeItem';
   static const deleteOfThisItem = 'deleteOfThisItem';
   static const kg = 'kg';
+  static const tapForError = 'tapForError';
+  static const tapForSuccess = 'tapForSuccess';
+  static const useClubCard = 'useClubCard';
+  static const askTapCard1 = 'askTapCard1';
+  static const askTapCard2 = 'askTapCard2';
 }
 
 class AppLocales {

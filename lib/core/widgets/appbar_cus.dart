@@ -20,7 +20,7 @@ AppBar buildAppBarCus({required String title, required Function() onTap}) {
           title,
           style: TextStyle(
               color: AppColors.mainBlue,
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.w500),
         ),
       ],

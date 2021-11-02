@@ -66,7 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: AppIcons.logo_card.widget(fit: BoxFit.fitWidth)),
                   ),
                   MenuWidget(
-                    onTap: () {},
+                    onTap: () {
+                      NavigationService.push(Routes.identify_customer_2);
+                    },
                     title: LocaleTexts.newSale.tr(),
                     icon: Container(
                         width: 40,

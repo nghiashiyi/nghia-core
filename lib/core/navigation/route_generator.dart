@@ -2,6 +2,7 @@ import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/features/home/representation/home_2_screen.dart';
 import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/customer_name_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/discount_code_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/discount_failure_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/discount_scan_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_screen.dart';
@@ -16,7 +17,9 @@ import 'package:adroit_flutter/features/new_club_card/representation/scan_canist
 import 'package:adroit_flutter/features/new_sale/representation/discount_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/discount_success_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/identify_customer_2_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/tap_club_card_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -67,6 +70,12 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: DiscountSuccessScreen());
     case Routes.discount_failure:
       return _buildRoute(settings: settings, screen: DiscountFailureScreen());
+    case Routes.discount_code:
+      return _buildRoute(settings: settings, screen: DiscountCodeScreen());
+    case Routes.identify_customer_2:
+      return _buildRoute(settings: settings, screen: IdentifyCustomer2Screen());
+    case Routes.tap_club_card:
+      return _buildRoute(settings: settings, screen: TapClubCardScreen());
     default:
       return _errorRoute();
   }

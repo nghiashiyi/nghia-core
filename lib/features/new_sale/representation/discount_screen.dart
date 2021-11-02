@@ -80,7 +80,9 @@ class _DiscountScreenState extends State<DiscountScreen> {
                 child: Container(
                   width: width,
                   child: MenuWidget(
-                    onTap: () {},
+                    onTap: () {
+                      NavigationService.push(Routes.discount_code);
+                    },
                     title: LocaleTexts.discountCode.tr(),
                     icon: Container(
                         width: 40,

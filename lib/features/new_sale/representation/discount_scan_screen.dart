@@ -45,7 +45,7 @@ class _DiscountScanScreenState extends State<DiscountScanScreen> {
                             builder: (BuildContext context) => GestureDetector(
                                   onTap: () {
                                     NavigationService.push(
-                                        Routes.discount_failure);
+                                        Routes.discount_success);
                                   },
                                   child: AlertDialogLoading(
                                       onTapHeader: () {}, onTapFooter: () {}),

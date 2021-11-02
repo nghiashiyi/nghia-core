@@ -42,13 +42,13 @@ class _IdentifyCustomer2ScreenState extends State<IdentifyCustomer2Screen> {
               width: width,
               child: MenuWidget(
                 onTap: () {
-                  NavigationService.push(Routes.scan_canister,
-                      arguments: 'scan');
+                  NavigationService.push(Routes.tap_club_card,
+                      arguments: 'card');
                 },
-                title: LocaleTexts.useKokoCanister.tr(),
+                title: LocaleTexts.useClubCard.tr(),
                 icon: Container(
                   width: 50,
-                  child: AppImages.canister_logo.widget(fit: BoxFit.fitWidth),
+                  child: AppIcons.logo_card.widget(fit: BoxFit.fitWidth),
                 ),
               ),
             )),

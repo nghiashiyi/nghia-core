@@ -131,7 +131,8 @@ class LocaleTexts {
   static const item = 'item';
   static const unitPrice = 'unitPrice';
 
-  static const pointQrFlyer = 'pointQrFlyer';
+  static const pointQrFlyer1 = 'pointQrFlyer1';
+  static const pointQrFlyer2 = 'pointQrFlyer2';
   static const enterDiscountCode = 'enterDiscountCode';
   static const egNumber = 'egNumber';
   static const tapError = 'tapError';
@@ -140,6 +141,9 @@ class LocaleTexts {
   static const discountInvialid = 'discountInvialid';
   static const flyerDiscount = 'flyerDiscount';
   static const deleteItem = 'deleteItem';
+  static const removeItem = 'removeItem';
+  static const deleteOfThisItem = 'deleteOfThisItem';
+  static const kg = 'kg';
 }
 
 class AppLocales {

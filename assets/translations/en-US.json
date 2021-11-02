@@ -85,7 +85,8 @@
   "quantity": "QUANTITY",
   "item": "ITEM",
   "unitPrice": "UNIT PRICE",
-  "pointQrFlyer": "Point the camera at the QR Code print on the flyer",
+  "pointQrFlyer1": "Point the camera at the ",
+  "pointQrFlyer2": " print on the flyer",
   "enterDiscountCode": "Enter The Discount Code",
   "egNumber": "eg. 07XX XXXXXX",
   "tapError": "Tap for Error",
@@ -93,5 +94,8 @@
   "discountAddedCeleb": "KSH 10 OFF on \n Koko Club Items!",
   "discountInvialid": "Invialid Discount Code.\nPlease try again.",
   "flyerDiscount": "Flyer 10 Discount",
-  "deleteItem": "Delete ($productTotal) of this item?"
+  "deleteOfThisItem": "Delete (1) of this item?",
+  "removeItem": "Remove Item?",
+  "kg": "kg"
+
 }

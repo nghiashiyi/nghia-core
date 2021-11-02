@@ -14,4 +14,6 @@ class Routes {
   static const String choose_product = '/choose_product';
   static const String search_product = '/search_product';
   static const String review = '/review';
+  static const String discount = '/discount';
+  static const String discount_scan = '/discount_scan';
 }

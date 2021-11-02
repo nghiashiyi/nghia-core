@@ -2,6 +2,7 @@ import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/features/home/representation/home_2_screen.dart';
 import 'package:adroit_flutter/features/home/representation/home_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/customer_name_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/discount_scan_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/identify_customer_type_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/new_card_failure_screen.dart';
@@ -11,6 +12,7 @@ import 'package:adroit_flutter/features/new_club_card/representation/otp_screen.
 import 'package:adroit_flutter/features/new_club_card/representation/phone_number_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/review_screen.dart';
 import 'package:adroit_flutter/features/new_club_card/representation/scan_canister_screen.dart';
+import 'package:adroit_flutter/features/new_sale/representation/discount_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/choose_product_screen.dart';
 import 'package:adroit_flutter/features/new_sale/representation/search_product_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -55,6 +57,10 @@ Route<Object>? generateRoute(RouteSettings settings) {
       return _buildRoute(settings: settings, screen: SearchProductScreen());
     case Routes.review:
       return _buildRoute(settings: settings, screen: ReviewScreen());
+    case Routes.discount:
+      return _buildRoute(settings: settings, screen: DiscountScreen());
+    case Routes.discount_scan:
+      return _buildRoute(settings: settings, screen: DiscountScanScreen());
     default:
       return _errorRoute();
   }

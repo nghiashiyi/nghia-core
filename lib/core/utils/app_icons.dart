@@ -96,6 +96,21 @@ abstract class AppIcons {
       AppImageBuilder(_assetPath + 'remove_circle.svg');
 
   static AppImageBuilder get close => AppImageBuilder(_assetPath + 'close.svg');
+
+  static AppImageBuilder get delete_icon =>
+      AppImageBuilder(_assetPath + 'delete_icon.svg');
+
+  static AppImageBuilder get firework_celeb =>
+      AppImageBuilder(_assetPath + 'firework_celeb.svg');
+
+  static AppImageBuilder get gold_star =>
+      AppImageBuilder(_assetPath + 'gold_star.svg');
+
+  static AppImageBuilder get pin_code =>
+      AppImageBuilder(_assetPath + 'pin_code.svg');
+
+  static AppImageBuilder get qr_code_scanner =>
+      AppImageBuilder(_assetPath + 'qr_code_scanner.svg');
 }
 
 class AppImageBuilder {

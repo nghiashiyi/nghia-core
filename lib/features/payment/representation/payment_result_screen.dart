@@ -1,3 +1,5 @@
+import 'package:adroit_flutter/core/navigation/navigation_service.dart';
+import 'package:adroit_flutter/core/navigation/routes.dart';
 import 'package:adroit_flutter/core/utils/app_color.dart';
 import 'package:adroit_flutter/core/utils/app_icons.dart';
 import 'package:adroit_flutter/core/utils/app_locale.dart';
@@ -24,7 +26,7 @@ class _PaymentResultScreenState extends State<PaymentResultScreen> {
       appBar: buildCloseAppBarCus(
           title: LocaleTexts.paymentComplete.tr(),
           onTap: () {
-            Navigator.of(context).popUntil((route) => route.isFirst);
+            NavigationService.push(Routes.home, clean: true, replace: true);
           }),
       body: SafeArea(
           child: ListView(
